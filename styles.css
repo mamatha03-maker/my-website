@@ -1,0 +1,291 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #e6f4ff;
+  color: #00334d;
+}
+
+header {
+  background: #66c2ff;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #99d6ff;
+  padding: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #00334d;
+  font-weight: bold;
+}
+
+.box {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+ul {
+  list-style-type: square;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #66c2ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3399ff;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #66c2ff;
+  color: white;
+}
+.services-section {
+  padding: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  width: 85%;
+  margin: auto;
+}
+
+.service-box {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  border-top: 4px solid #66c2ff;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.service-box h3 {
+  color: #0077b3;
+}
+
+.highlight {
+  background: #dff3ff;
+  border-top: 4px solid #ff6b6b;
+}
+.emergency-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  padding: 15px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.emergency-btn:hover {
+  background: #e60000;
+  transform: scale(1.05);
+}
+select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  width: 100%;
+  background: #0077b3;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #005f8a;
+}
+.support-panel {
+  text-align: center;
+  padding: 30px;
+}
+
+.support-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  color: white;
+}
+
+.call {
+  background: #28a745;
+}
+
+.chat {
+  background: #0077b3;
+}
+
+.location {
+  background: #ff9800;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+.chat-float {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: #0077b3;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  width: 280px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+}
+
+.chat-header {
+  background: #0077b3;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-messages {
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+}
+
+.chat-input button {
+  background: #0077b3;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+}
+
+.bot {
+  background: #e6f4ff;
+  padding: 6px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.map-box {
+  background: #e6f4ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 80%;
+  text-align: left;
+  border-left: 5px solid #0077b3;
+}
+
+.map-box p {
+  margin: 8px 0;
+}
+
+button {
+  margin-top: 10px;
+}
+.logout-btn:hover {
+  background: #e60000;
+}
+button {
+  margin: 2px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+nav button {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+nav button:hover {
+  background: #e6b800;
+}

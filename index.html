@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Women Elderly Support</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Emergency Button -->
+<button class="emergency-btn" onclick="sendEmergency()">
+  🚨 Emergency Help
+</button>
+<body>
+
+  <header>
+    <h1>Women Elderly Support</h1>
+    <p>Care • Respect • Support</p>
+  </header>
+
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="#services">Services</a>
+  <a href="#contact">contact</a>
+  <a href="#Quick Support">Quick support</a>
+  <a href="#Request Help">Request Help</a>
+  
+
+  <button onclick="logout()" class="logout-btn">Logout</button>
+</nav>
+
+  <section id="home" class="box">
+    <h2> Welcome 💐 </h2>
+    <p>We support elderly women with care, safety, and emotional strength.</p>
+  </section>
+
+  <section id="about" class="box">
+    <h2>About Us 🫱🏻‍🫲🏼 </h2>
+    <p>We are a community dedicated to helping elderly women live with dignity, health, and happiness.</p>
+  </section>
+
+<section id="services" class="services-section">
+  <h2>Our Services 💮 </h2>
+  <p class="subtitle">Care, Support & Safety for Elderly Women</p>
+
+  <div class="services-grid">
+
+    <div class="service-box">
+      <h3>🏥 Health Care</h3>
+      <p>Doctor support, medicine help, and regular health checkups.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>🧠 Mental Wellbeing</h3>
+      <p>Friendly talks, counseling, and loneliness support.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>💰 Pension & Finance Help</h3>
+      <p>Guidance for government schemes and financial support.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>🏠 Home Assistance</h3>
+      <p>Daily help like cleaning, cooking, and basic needs support.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>🚨 Emergency Help</h3>
+      <p>Quick response support during urgent health or safety issues.</p>
+    </div>
+
+    <div class="service-box highlight">
+      <h3>❤️ 24/7 Care Support</h3>
+      <p>Always available support line for elderly women safety.</p>
+    </div>
+
+  </div>
+</section>
+
+  <section id="contact" class="box">
+    <h2>Contact Us</h2>
+    <form onsubmit="return submitForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="msg"></p>
+  </section>
+ <script src="script.js"></script>
+  <script>
+  let user = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (!user) {
+    window.location.href = "login.html";
+  }
+</script>
+  <section id="request" class="box">
+  <h2>🆘 Request Help</h2>
+  <p>Fill this form to request support instantly</p>
+
+  <form onsubmit="return requestHelp()">
+
+    <input type="text" id="rname" placeholder="Your Name" required>
+
+    <input type="number" id="rage" placeholder="Age" required>
+
+    <select id="rtype">
+      <option value="Medical">Medical Help</option>
+      <option value="Emotional">Emotional Support</option>
+      <option value="Financial">Financial Guidance</option>
+      <option value="Daily Care">Daily Care</option>
+      <option value="Emergency">Emergency Help</option>
+    </select>
+
+    <textarea id="rmessage" placeholder="Describe your problem..." required></textarea>
+
+    <button type="submit">Send Request</button>
+  </form>
+
+  <p id="rmsg"></p>
+</section>
+<section class="support-panel">
+  <h2>📞 Quick Support</h2>
+  <p>Get help instantly with one click</p>
+
+  <div class="support-buttons">
+
+    <a href="tel:1800123456" class="btn call">
+      📱 Call Support
+    </a>
+
+    <button class="btn chat" onclick="openChat()">
+      💬 Open Chat
+    </button>
+
+    <button class="btn location" onclick="showLocation()">
+      📍 Nearby Help Center
+    </button>
+
+  </div>
+</section>
+<!-- Chat Button -->
+<button class="chat-float" onclick="toggleChat()">
+  💬 Chat
+</button>
+
+<!-- Chat Box -->
+<div id="chatBox" class="chat-box">
+
+  <div class="chat-header">
+    <h3>Support Chat</h3>
+    <button onclick="toggleChat()">✖</button>
+  </div>
+
+  <div id="chatMessages" class="chat-messages">
+    <p class="bot">👩 Hello! How can we help you today?</p>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="userMsg" placeholder="Type your message...">
+    <button onclick="sendMsg()">Send</button>
+  </div>
+
+</div>
+<section id="map" class="box">
+  <h2>🗺️ Nearby Help Centers</h2>
+  <p>Find support locations near you</p>
+
+  <div class="map-box">
+    <p>📍 Guntur Elderly Support Center</p>
+    <p>📍 Women Care NGO Center</p>
+    <p>📍 Government Health Support Unit</p>
+    <p>📍 Community Help Point</p>
+  </div>
+
+  <button onclick="showMapAlert()">Open Map</button>
+</section>
+<footer>
+    <p>© 2026 Women Elderly Support | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>👩‍💻 Admin Dashboard</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="admin.html">Dashboard</a>
+    <button onclick="clearRequests()" class="logout-btn">Clear Data</button>
+  </nav>
+
+  <section class="box">
+    <h2>📋 Help Requests</h2>
+    <table border="1" width="100%" id="requestTable">
+     <tr>
+  <th>Name</th>
+  <th>Age</th>
+  <th>Type</th>
+  <th>Message</th>
+  <th>Status</th>
+  <th>Action</th>
+</tr>
+    </table>
+  </section>
+  <script>
+  let user = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (!user || user.role !== "admin") {
+    window.location.href = "login.html";
+  }
+</script>
+</body>
+</html>
